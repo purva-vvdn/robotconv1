@@ -1,0 +1,42 @@
+*** Settings ***
+Documentation     A test suite with a single test for SmartFitAutomation
+...               Created by hats' Robotcorder
+Library           Selenium2Library    timeout=10
+
+*** Variables ***
+${BROWSER}    chrome
+${SLEEP}    3
+
+*** Test Cases ***
+SmartFitAutomation test
+    Open Browser    http://dev-sfit.vvdncloud.com/dashboard    ${BROWSER}
+    Click Element    //mat-toolbar[@class="mat-toolbar header-container mat-toolbar-single-row"]
+    Click Element    xpath=(//span)[10]
+    Click Element    xpath=(//span)[14]
+    Click Element    xpath=(//span)[16]
+    Input Text    //input[@id="mat-input-7"]    smartfit
+    Input Text    //input[@id="mat-input-7"]
+    Click Element    xpath=(//span)[13]
+    Click Element    xpath=(//span)[10]
+    Click Element    //span[@class="mat-mdc-button-touch-target"]
+    Click Element    //mat-form-field[@class="mat-mdc-form-field mat-mdc-tooltip-trigger ng-tns-c1205077789-59 ng-star-inserted mat-mdc-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-hide-placeholder mat-primary ng-untouched ng-pristine ng-invalid"]
+    Input Text    //input[@id="mat-input-10"]    dscsaz
+    Click Element    //mat-option[@id="mat-option-15"]
+    Click Element    //div[@class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]
+    Click Element    //span[@class="mat-mdc-select-placeholder mat-mdc-select-min-line ng-tns-c3393473648-63 ng-star-inserted"]
+    Click Element    //mat-option[@id="mat-option-29"]
+    Click Element    //div[@class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]
+    Click Element    //span[@class="mat-mdc-select-placeholder mat-mdc-select-min-line ng-tns-c3393473648-65 ng-star-inserted"]
+    Click Element    //span[@class="mdc-list-item__primary-text"]
+    Click Element    //div[@class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]
+    Input Text    //input[@id="mat-input-11"]    dszx
+    Click Element    //label[@for="mat-input-12"]
+    Input Text    //input[@id="mat-input-12"]    zxaszxcsazx
+    Input Text    //input[@id="mat-input-13"]    ZXSxasZZ
+    Click Element    //div[@class="mat-mdc-form-field-infix ng-tns-c1205077789-69"]
+    Input Text    //input[@id="mat-input-14"]    ***
+    Input Text    //textarea[@id="mat-input-15"]    rfweszxfdwes
+    Click Element    //button[@class="btn-primary"]
+    Click Element    //div[@class="backdrop ng-star-inserted"]
+
+    Close Browser
